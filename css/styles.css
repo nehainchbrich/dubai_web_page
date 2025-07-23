@@ -6,6 +6,12 @@
   font-family: "CenturyGothicPaneuropeanLight";
   src: url(../fonts/CenturyGothicPaneuropeanLight.ttf);
 }
+.option .video-toggle{
+  display: none;
+}
+.option.active .video-toggle{
+  display: inherit;
+}
 body {
   margin: 0;
   color: #222;
