@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Slider with Play/Pause</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 90%;
+      max-width: 1400px;
+      height: 500px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .option {
+      position: relative;
+      flex: 1;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .option video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-toggle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 18px;
+      padding: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .video-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .label {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+      color: #fff;
+      z-index: 5;
+    }
+
+    .label .main {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .label .sub {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="option">
+      <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted playsinline></video>
+      <button class="video-toggle"><span class="icon">▶</span></button>
+      <div class="label">
+        <div class="main">Video 1</div>
+        <div class="sub">Description of Video 1</div>
+      </div>
+    </div>
+
+    <div class="option">
+      <video src="https://www.w3schools.com/html/movie.mp4" muted playsinline></video>
+      <button class="video-toggle"><span class="icon">▶</span></button>
+      <div class="label">
+        <div class="main">Video 2</div>
+        <div class="sub">Description of Video 2</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.video-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const video = button.parentElement.querySelector('video');
+
+        // Pause all other videos
+        document.querySelectorAll('video').forEach(v => {
+          if (v !== video) {
+            v.pause();
+            v.parentElement.querySelector('.icon').textContent = '▶';
+          }
+        });
+
+        if (video.paused) {
+          video.play();
+          button.querySelector('.icon').textContent = '⏸';
+        } else {
+          video.pause();
+          button.querySelector('.icon').textContent = '▶';
+        }
+      });
+    });
+
+    // Optional: Pause all videos on page load
+    window.addEventListener('load', () => {
+      document.querySelectorAll('video').forEach(v => v.pause());
+    });
+  </script>
+</body>
+</html>
