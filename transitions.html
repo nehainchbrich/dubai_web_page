@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Fade Sections</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      scroll-behavior: smooth;
+      background: rgba(0, 0, 0, 0.315);
+    }
+
+    .background-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .background-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .background-img.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 0 10%;
+      color: white;
+      position: relative;
+    }
+
+    .section-content {
+      width: 50%;
+      font-size: 1.8rem;
+      will-change: transform, opacity;
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+    body:before{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:  linear-gradient(16deg, rgb(0 0 0 / 77%) 8%, rgba(0, 0, 0, 0.1) 100%);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Double Layer Backgrounds -->
+<div class="background-container">
+  <div id="bg1" class="background-img active" style="background-size:content; background-image: url('images/apartment.webp')"></div>
+  <div id="bg2" class="background-img"></div>
+</div>
+
+<!-- Content Sections with Data Attributes -->
+<div class="section" data-bg="images/apartment.webp">
+  <div class="section-content" >
+    <small style="color:#a09a9a;    font-weight: bolder;">Chip uses powerful adaptation algorithms to process sound more quickly,</small> tuning audio at the precise moment you hear it.
+  </div>
+</div>
+
+<div class="section" data-bg="images/villa.webp">
+  <div class="section-content">
+    Enhancement algorithms isolate your voice, so your phone and video calls always sound completely natural.
+  </div>
+</div>
+
+<div class="section" data-bg="images/townhouse.avif">
+  <div class="section-content">
+    An inward-facing microphone works with voice-enhancement algorithms.
+  </div>
+</div>
+
+
+<script>
+  const bg1 = document.getElementById('bg1');
+  const bg2 = document.getElementById('bg2');
+  let isBg1Active = true;
+
+  const sections = document.querySelectorAll('.section');
+
+  // Text fade/translate on scroll
+  window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+      const content = section.querySelector('.section-content');
+      const rect = section.getBoundingClientRect();
+      const winH = window.innerHeight;
+
+      const progress = Math.min(Math.abs(rect.top + rect.height / 2 - winH / 2) / (winH / 2), 1);
+      content.style.transform = `translateY(${progress * -50}px)`;
+      content.style.opacity = `${1 - progress}`;
+    });
+  });
+
+  // Background crossfade logic
+  const bgObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const newBg = entry.target.getAttribute('data-bg');
+        const nextBg = isBg1Active ? bg2 : bg1;
+        const currentBg = isBg1Active ? bg1 : bg2;
+
+        nextBg.style.backgroundImage = `url('${newBg}')`;
+        nextBg.classList.add('active');
+        currentBg.classList.remove('active');
+
+        isBg1Active = !isBg1Active;
+      }
+    });
+  }, { threshold: 0.6 });
+
+  sections.forEach(section => bgObserver.observe(section));
+</script>
+
+</body>
+</html>
