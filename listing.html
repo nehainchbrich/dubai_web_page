@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar and Banner Single Background</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/property-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+      <nav class="navbar">
+        <div class="navbar-left">
+          <div class="logo"><img src="images/logo.png" alt="logo"></div>
+          <form class="searchbar" action="#" method="get">
+            <span class="search-icon"><i class="fas fa-search"></i></span>
+            <input type="text" placeholder="Search Property here..." name="q">
+            <button type="submit">Search</button>
+          </form>
+        </div>
+        <div class="navbar-right">
+          <a href="#" class="nav-link">Expo - 2025</a>
+            <a href="#" class="nav-link">Buy</a>
+          <a href="#" class="nav-link">sell</a>
+          <a href="#" class="nav-link">Offplan</a>
+          <a href="#" class="nav-link">Sign up</a>
+          <a href="#" class="nav-link">Login</a>
+        </div>
+     
+      </nav>
+
+
+
+
+  <div class="property-listing-section">
+    <div class="listing-container">
+      <!-- Left: Filters -->
+      <aside class="listing-filters">
+        <form class="filter-form">
+          <div class="filter-group">
+            <label for="search">Search</label>
+            <input type="text" id="search" name="search" placeholder="Search properties...">
+          </div>
+          <div class="filter-group">
+            <label for="city">City</label>
+            <select id="city" name="city">
+              <option value="">All Cities</option>
+              <option value="dubai">Dubai</option>
+              <option value="abu-dhabi">Abu Dhabi</option>
+              <option value="sharjah">Sharjah</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="price">Price Range</label>
+            <input type="range" id="price" name="price" min="50000" max="5000000" step="10000">
+            <div class="price-range-labels">
+              <span>50k</span>
+              <span>5M</span>
+            </div>
+          </div>
+          <div class="filter-group">
+            <label for="type">Property Type</label>
+            <select id="type" name="type">
+              <option value="">All Types</option>
+              <option value="apartment">Apartment</option>
+              <option value="villa">Villa</option>
+              <option value="townhouse">Townhouse</option>
+              <option value="commercial">Commercial</option>
+            </select>
+          </div>
+          <button type="submit" class="filter-btn">Apply Filters</button>
+        </form>
+      </aside>
+      <!-- Right: Property List -->
+      <main class="listing-results">
+        <div class="container">
+          <nav class="horizontal-location-links" style="margin: 24px 0; overflow-x: auto; white-space: nowrap;">
+            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Downtown Dubai</a>
+            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Palm Jumeirah</a>
+            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Business Bay</a>
+            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Dubai Marina</a>
+            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Jumeirah Village Circle</a>
+            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Arabian Ranches</a>
+            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Dubai Hills Estate</a>
+            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Emirates Hills</a>
+            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Mirdif</a>
+            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Al Barsha</a>
+          </nav>
+        </div>
+      
+        <div class="property-card">
+          <img src="images/banner.jpg" alt="Property 1">
+          <div class="property-info">
+            <h3 class="property-project">Downtown Heights</h3>
+            <small>3 BHK Flat in Southern Bypass, Kolkata ·Grey-Tick RERA | HIRA</small>
+            <p class="property-location"><strong>Location:</strong> Dubai</p>
+            <div class="d-flex" style="gap: 20px;">
+            <p class="property-price"><strong>Price:</strong> AED 1,200,000</p>
+            <p class="property-sqft"><strong>Sq Ft:</strong> 1,250</p>
+            <p class="property-type"><strong>Type:</strong> Apartment</p>
+            </div>
+            <div class="property-features">
+              <span class="feature"><i class="fa fa-bed"></i> 3</span>
+              <span class="feature"><i class="fa fa-bath"></i> 2</span>
+            </div>
+          </div>
+        </div>
+       
+        <div class="property-card">
+          <img src="images/banner.jpg" alt="Property 3">
+          <div class="property-info">
+            <h3 class="property-project">Family Townhouse</h3>
+            <p class="property-location"><strong>Location:</strong> Sharjah</p>
+            <div class="d-flex" style="gap: 20px;">
+            <p class="property-price"><strong>Price:</strong> AED 950,000</p>
+            <p class="property-sqft"><strong>Sq Ft:</strong> 1,800</p>
+            <p class="property-type"><strong>Type:</strong> Townhouse</p>
+            </div>
+            <div class="property-features">
+              <span class="feature"><i class="fa fa-bed"></i> 4</span>
+              <span class="feature"><i class="fa fa-bath"></i> 3</span>
+            </div>
+          </div>
+        </div>
+        <!-- Add more property cards as needed -->
+      </main>
+    </div>
+  </div>
+
+<section class="seo-links-section ">
+  <div class="container">
+    <div class="d-flex" style=" display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: space-between;">
+<div>
+  <h3>SEO Links</h3>
+  <ul class="seo-links-grid">
+    <li><a href="#">Apartments for Sale in Dubai</a></li>
+    <li><a href="#">Villas for Sale in Dubai</a></li>
+    <li><a href="#">Townhouses for Sale in Dubai</a></li>
+    <li><a href="#">Luxury Properties for Sale</a></li>
+    <li><a href="#">Ready to Move Properties</a></li>
+    <li><a href="#">Apartments for Rent in Dubai</a></li>
+    <li><a href="#">Villas for Rent in Dubai</a></li>
+
+  </ul>
+</div>
+<div>
+  <h3>SEO Links</h3>
+  <ul class="seo-links-grid">
+    <li><a href="#">Apartments for Sale in Dubai</a></li>
+    <li><a href="#">Villas for Sale in Dubai</a></li>
+    <li><a href="#">Townhouses for Sale in Dubai</a></li>
+    <li><a href="#">Luxury Properties for Sale</a></li>
+    <li><a href="#">Ready to Move Properties</a></li>
+    <li><a href="#">Apartments for Rent in Dubai</a></li>
+    <li><a href="#">Villas for Rent in Dubai</a></li>
+   
+  </ul>
+</div>
+<div>
+  <h3>SEO Links</h3>
+  <ul class="seo-links-grid">
+    <li><a href="#">Apartments for Sale in Dubai</a></li>
+    <li><a href="#">Villas for Sale in Dubai</a></li>
+    <li><a href="#">Townhouses for Sale in Dubai</a></li>
+    <li><a href="#">Luxury Properties for Sale</a></li>
+    <li><a href="#">Ready to Move Properties</a></li>
+    <li><a href="#">Apartments for Rent in Dubai</a></li>
+    <li><a href="#">Villas for Rent in Dubai</a></li>
+  
+  </ul>
+</div>
+<div>
+  <h3>SEO Links</h3>
+  <ul class="seo-links-grid">
+    <li><a href="#">Apartments for Sale in Dubai</a></li>
+    <li><a href="#">Villas for Sale in Dubai</a></li>
+    <li><a href="#">Townhouses for Sale in Dubai</a></li>
+    <li><a href="#">Luxury Properties for Sale</a></li>
+    <li><a href="#">Ready to Move Properties</a></li>
+    <li><a href="#">Apartments for Rent in Dubai</a></li>
+    <li><a href="#">Villas for Rent in Dubai</a></li>
+
+  </ul>
+</div>
+    </div>
+ 
+  </div>
+</section>
+
+  <!-- <div id='dragelem'></div> -->
+<footer class="site-footer ">
+  <div class="footer-top">
+    <div class="footer-col about">
+      <h3>About Us</h3>
+      <p>
+        We are Dubai’s leading real estate platform, connecting buyers and sellers with the best properties and investment opportunities in the city.
+        We are Dubai’s leading real estate platform, connecting buyers
+      </p>
+    </div>
+    <div class="footer-col contact">
+      <h3>Contact Details</h3>
+      <ul>
+        <li>Phone: +971 123 456 789</li>
+        <li>Email: info@dubairealty.com</li>
+        <li>Office: Downtown Dubai, UAE</li>
+        <li>Phone: +971 123 456 789</li>
+        <li>Email: info@dubairealty.com</li>
+        <li>Office: Downtown Dubai, UAE</li>
+      </ul>
+    </div>
+    <div class="footer-col links">
+      <h3>Recent Articles</h3>
+      <ul>
+        <li>
+          <a href="#">
+            <span class="footer-link-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
+                <path d="M7 5l5 5-5 5" stroke="#ff9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Home
+           
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="footer-link-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
+                <path d="M7 5l5 5-5 5" stroke="#ff9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            About Us
+           
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="footer-link-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
+                <path d="M7 5l5 5-5 5" stroke="#ff9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Properties
+          
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="footer-link-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
+                <path d="M7 5l5 5-5 5" stroke="#ff9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Contact
+          
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="footer-link-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
+                <path d="M7 5l5 5-5 5" stroke="#ff9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Contact fkwejf ewfkewkf
+          
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="footer-link-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
+                <path d="M7 5l5 5-5 5" stroke="#ff9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            Contact fkwejf ewfkewkf
+          
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-col latest-blog-footer">
+  <h3>Latest Blog</h3>
+  <ul class="footer-blog-list">
+    <li>
+      <a href="#">
+        <img src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="Blog 1">
+        <div>
+          <span class="blog-title">Dubai Real Estate Trends 2024</span>
+          <span class="blog-date">May 10, 2024</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="Blog 2">
+        <div>
+          <span class="blog-title">Top Communities for Families</span>
+          <span class="blog-date">Apr 28, 2024</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <img src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="Blog 3">
+        <div>
+          <span class="blog-title">Guide to Off-Plan Investments</span>
+          <span class="blog-date">Apr 15, 2024</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2024 Dubai Realty. All rights reserved.
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Custom play/pause button logic for video grid
+    document.querySelectorAll('.video-col').forEach(function(col) {
+      const video = col.querySelector('video');
+      const btn = col.querySelector('.video-play-pause-btn');
+      function updateBtn() {
+        btn.textContent = video.paused ? '▶' : '⏸';
+      }
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (video.paused) {
+          // Pause all other videos
+          document.querySelectorAll('.video-col video').forEach(v => { if (v !== video) v.pause(); });
+          video.play();
+        } else {
+          video.pause();
+        }
+        updateBtn();
+      });
+      video.addEventListener('play', updateBtn);
+      video.addEventListener('pause', updateBtn);
+      // Show controls only on hover/focus
+      video.controls = false;
+      col.addEventListener('mouseenter', function() { video.controls = true; });
+      col.addEventListener('mouseleave', function() { video.controls = false; });
+      col.addEventListener('focusin', function() { video.controls = true; });
+      col.addEventListener('focusout', function() { video.controls = false; });
+      updateBtn();
+    });
+  </script>
+</body>
+</html>

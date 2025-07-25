@@ -405,8 +405,3 @@ $(document).ready(() => {
   // Start autoplay
   startAutoplay();
 });
-
-
-
-
-
