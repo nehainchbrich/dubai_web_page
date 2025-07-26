@@ -37,6 +37,8 @@
     <div class="listing-container">
       <!-- Left: Filters -->
       <aside class="listing-filters">
+        <h4 class="p-0">Filters</h4>
+        <hr>
         <form class="filter-form">
           <div class="filter-group">
             <label for="search">Search</label>
@@ -44,6 +46,15 @@
           </div>
           <div class="filter-group">
             <label for="city">City</label>
+            <select id="city" name="city">
+              <option value="">All Cities</option>
+              <option value="dubai">Dubai</option>
+              <option value="abu-dhabi">Abu Dhabi</option>
+              <option value="sharjah">Sharjah</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="city">Bedrooms, Bathrooms</label>
             <select id="city" name="city">
               <option value="">All Cities</option>
               <option value="dubai">Dubai</option>
@@ -69,29 +80,65 @@
               <option value="commercial">Commercial</option>
             </select>
           </div>
+          <div class="filter-group">
+            <label for="type">Investment Objective</label>
+            <select id="type" name="type">
+              <option value="">Cash Flow</option>
+              <option value="apartment">Capital Growth</option>
+              <option value="villa">Both</option>
+              <option value="townhouse">Other</option>
+            </select>
+          </div>
           <button type="submit" class="filter-btn">Apply Filters</button>
         </form>
       </aside>
       <!-- Right: Property List -->
       <main class="listing-results">
         <div class="container">
-          <nav class="horizontal-location-links" style="margin: 24px 0; overflow-x: auto; white-space: nowrap;">
-            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Downtown Dubai</a>
-            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Palm Jumeirah</a>
-            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Business Bay</a>
-            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Dubai Marina</a>
-            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Jumeirah Village Circle</a>
-            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Arabian Ranches</a>
-            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Dubai Hills Estate</a>
-            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Emirates Hills</a>
-            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Mirdif</a>
-            <a href="#" style="display: inline-block; margin-right: 24px; font-weight: 500; color: #0077b6; text-decoration: none;">Al Barsha</a>
-          </nav>
+          <div class="location-links-carousel-container">
+            <button class="location-nav-btn prev-location-btn" id="prevLocationBtn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="location-links-carousel" id="locationLinksCarousel">
+              <div class="location-links-row">
+                <a href="#" class="location-link">Downtown Dubai</a>
+                <a href="#" class="location-link">Palm Jumeirah</a>
+                <a href="#" class="location-link">Business Bay</a>
+                <a href="#" class="location-link">Dubai Marina</a>
+                <a href="#" class="location-link">Jumeirah Village Circle</a>
+                <a href="#" class="location-link">Arabian Ranches</a>
+              </div>
+              <div class="location-links-row">
+                <a href="#" class="location-link">Dubai Hills Estate</a>
+                <a href="#" class="location-link">Emirates Hills</a>
+                <a href="#" class="location-link">Mirdif</a>
+                <a href="#" class="location-link">Al Barsha</a>
+                <a href="#" class="location-link">Dubai Silicon Oasis</a>
+                <a href="#" class="location-link">Dubai Sports City</a>
+              </div>
+              <div class="location-links-row">
+                <a href="#" class="location-link">Dubai Production City</a>
+                <a href="#" class="location-link">Dubai Knowledge Park</a>
+                <a href="#" class="location-link">Dubai Media City</a>
+                <a href="#" class="location-link">Dubai Internet City</a>
+                <a href="#" class="location-link">Dubai Healthcare City</a>
+                <a href="#" class="location-link">Dubai International City</a>
+              </div>
+            </div>
+            
+            <button class="location-nav-btn next-location-btn" id="nextLocationBtn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+     
         </div>
       
         <div class="property-card">
+          <div class="card-ribbon ribbon-featured">Featured</div>
           <img src="images/banner.jpg" alt="Property 1">
           <div class="property-info">
+            <div class="p-2">
             <h3 class="property-project">Downtown Heights</h3>
             <small>3 BHK Flat in Southern Bypass, Kolkata ·Grey-Tick RERA | HIRA</small>
             <p class="property-location"><strong>Location:</strong> Dubai</p>
@@ -100,26 +147,139 @@
             <p class="property-sqft"><strong>Sq Ft:</strong> 1,250</p>
             <p class="property-type"><strong>Type:</strong> Apartment</p>
             </div>
+            <div class="d-flex justify-content-between align-items-center ">
             <div class="property-features">
               <span class="feature"><i class="fa fa-bed"></i> 3</span>
               <span class="feature"><i class="fa fa-bath"></i> 2</span>
+            </div>
+            <small>Updated 12 hours ago</small>
+            <p><span class="active-badge">Active</span> <span>View Listing</span></p>
+            </div>
+            </div>
+            <div class="d-flex justify-content-between light-back">
+              <div><span>View</span> 174</div>
+              <div><span>Leads</span> 174</div>
+              <div><span>Applications</span> 174</div>
             </div>
           </div>
         </div>
        
         <div class="property-card">
+          <div class="card-ribbon ribbon-new">New</div>
           <img src="images/banner.jpg" alt="Property 3">
           <div class="property-info">
-            <h3 class="property-project">Family Townhouse</h3>
-            <p class="property-location"><strong>Location:</strong> Sharjah</p>
+            <div class="p-2">
+            <h3 class="property-project">Downtown Heights</h3>
+            <small>3 BHK Flat in Southern Bypass, Kolkata ·Grey-Tick RERA | HIRA</small>
+            <p class="property-location"><strong>Location:</strong> Dubai</p>
             <div class="d-flex" style="gap: 20px;">
-            <p class="property-price"><strong>Price:</strong> AED 950,000</p>
-            <p class="property-sqft"><strong>Sq Ft:</strong> 1,800</p>
-            <p class="property-type"><strong>Type:</strong> Townhouse</p>
+            <p class="property-price"><strong>Price:</strong> AED 1,200,000</p>
+            <p class="property-sqft"><strong>Sq Ft:</strong> 1,250</p>
+            <p class="property-type"><strong>Type:</strong> Apartment</p>
             </div>
+            <div class="d-flex justify-content-between align-items-center ">
             <div class="property-features">
-              <span class="feature"><i class="fa fa-bed"></i> 4</span>
-              <span class="feature"><i class="fa fa-bath"></i> 3</span>
+              <span class="feature"><i class="fa fa-bed"></i> 3</span>
+              <span class="feature"><i class="fa fa-bath"></i> 2</span>
+            </div>
+            <small>Updated 12 hours ago</small>
+            <p><span class="active-badge">Active</span> <span>View Listing</span></p>
+            </div>
+            </div>
+            <div class="d-flex justify-content-between light-back">
+              <div><span>View</span> 174</div>
+              <div><span>Leads</span> 174</div>
+              <div><span>Applications</span> 174</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="card-ribbon ribbon-hot">Hot</div>
+          <img src="images/villa.webp" alt="Property 4">
+          <div class="property-info">
+            <div class="p-2">
+            <h3 class="property-project">Downtown Heights</h3>
+            <small>3 BHK Flat in Southern Bypass, Kolkata ·Grey-Tick RERA | HIRA</small>
+            <p class="property-location"><strong>Location:</strong> Dubai</p>
+            <div class="d-flex" style="gap: 20px;">
+            <p class="property-price"><strong>Price:</strong> AED 1,200,000</p>
+            <p class="property-sqft"><strong>Sq Ft:</strong> 1,250</p>
+            <p class="property-type"><strong>Type:</strong> Apartment</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center ">
+            <div class="property-features">
+              <span class="feature"><i class="fa fa-bed"></i> 3</span>
+              <span class="feature"><i class="fa fa-bath"></i> 2</span>
+            </div>
+            <small>Updated 12 hours ago</small>
+            <p><span class="active-badge">Active</span> <span>View Listing</span></p>
+            </div>
+            </div>
+            <div class="d-flex justify-content-between light-back">
+              <div><span>View</span> 174</div>
+              <div><span>Leads</span> 174</div>
+              <div><span>Applications</span> 174</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="card-ribbon ribbon-offer">Offer</div>
+          <img src="images/apartment.webp" alt="Property 5">
+          <div class="property-info">
+            <div class="p-2">
+            <h3 class="property-project">Downtown Heights</h3>
+            <small>3 BHK Flat in Southern Bypass, Kolkata ·Grey-Tick RERA | HIRA</small>
+            <p class="property-location"><strong>Location:</strong> Dubai</p>
+            <div class="d-flex" style="gap: 20px;">
+            <p class="property-price"><strong>Price:</strong> AED 1,200,000</p>
+            <p class="property-sqft"><strong>Sq Ft:</strong> 1,250</p>
+            <p class="property-type"><strong>Type:</strong> Apartment</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center ">
+            <div class="property-features">
+              <span class="feature"><i class="fa fa-bed"></i> 3</span>
+              <span class="feature"><i class="fa fa-bath"></i> 2</span>
+            </div>
+            <small>Updated 12 hours ago</small>
+            <p><span class="active-badge">Active</span> <span>View Listing</span></p>
+            </div>
+            </div>
+            <div class="d-flex justify-content-between light-back">
+              <div><span>View</span> 174</div>
+              <div><span>Leads</span> 174</div>
+              <div><span>Applications</span> 174</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="card-ribbon ribbon-sold">Sold</div>
+          <img src="images/townhouse.avif" alt="Property 6">
+          <div class="property-info">
+            <div class="p-2">
+            <h3 class="property-project">Downtown Heights</h3>
+            <small>3 BHK Flat in Southern Bypass, Kolkata ·Grey-Tick RERA | HIRA</small>
+            <p class="property-location"><strong>Location:</strong> Dubai</p>
+            <div class="d-flex" style="gap: 20px;">
+            <p class="property-price"><strong>Price:</strong> AED 1,200,000</p>
+            <p class="property-sqft"><strong>Sq Ft:</strong> 1,250</p>
+            <p class="property-type"><strong>Type:</strong> Apartment</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center ">
+            <div class="property-features">
+              <span class="feature"><i class="fa fa-bed"></i> 3</span>
+              <span class="feature"><i class="fa fa-bath"></i> 2</span>
+            </div>
+            <small>Updated 12 hours ago</small>
+            <p><span class="active-badge">Active</span> <span>View Listing</span></p>
+            </div>
+            </div>
+            <div class="d-flex justify-content-between light-back">
+              <div><span>View</span> 174</div>
+              <div><span>Leads</span> 174</div>
+              <div><span>Applications</span> 174</div>
             </div>
           </div>
         </div>
@@ -324,6 +484,104 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/script.js"></script>
   <script>
+    // Location Links Carousel Navigation
+    document.addEventListener('DOMContentLoaded', function() {
+      const locationCarousel = document.getElementById('locationLinksCarousel');
+      const prevLocationBtn = document.getElementById('prevLocationBtn');
+      const nextLocationBtn = document.getElementById('nextLocationBtn');
+      const locationPagination = document.getElementById('locationPagination');
+      
+      if (!locationCarousel || !prevLocationBtn || !nextLocationBtn || !locationPagination) return;
+      
+      let currentLocationIndex = 0;
+      const locationRows = locationCarousel.querySelectorAll('.location-links-row');
+      const totalLocationRows = locationRows.length;
+      
+      // Update carousel position
+      function updateLocationCarousel() {
+        // Move all rows to their correct positions
+        locationRows.forEach((row, index) => {
+          const translateY = (index - currentLocationIndex) * 100;
+          row.style.transform = `translateY(${translateY}%)`;
+        });
+        
+        // Update button states
+        prevLocationBtn.disabled = currentLocationIndex === 0;
+        nextLocationBtn.disabled = currentLocationIndex >= totalLocationRows - 1;
+
+        // Update pagination dots
+        locationPagination.querySelectorAll('.pagination-dot').forEach((dot, dotIndex) => {
+          dot.classList.remove('active');
+          if (dotIndex === currentLocationIndex) {
+            dot.classList.add('active');
+          }
+        });
+      }
+      
+      // Next button click
+      nextLocationBtn.addEventListener('click', function() {
+        if (currentLocationIndex < totalLocationRows - 1) {
+          currentLocationIndex++;
+          updateLocationCarousel();
+        }
+      });
+      
+      // Previous button click
+      prevLocationBtn.addEventListener('click', function() {
+        if (currentLocationIndex > 0) {
+          currentLocationIndex--;
+          updateLocationCarousel();
+        }
+      });
+      
+      // Handle location link clicks
+      document.querySelectorAll('.location-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // Remove active class from all links
+          document.querySelectorAll('.location-link').forEach(l => l.classList.remove('active'));
+          
+          // Add active class to clicked link
+          this.classList.add('active');
+          
+          // Here you can add logic to filter properties based on location
+          console.log('Selected location:', this.textContent);
+        });
+      });
+      
+      // Initialize carousel
+      updateLocationCarousel();
+      
+      // Add touch/swipe support for mobile
+      let startY = 0;
+      let endY = 0;
+      
+      locationCarousel.addEventListener('touchstart', function(e) {
+        startY = e.touches[0].clientY;
+      });
+      
+      locationCarousel.addEventListener('touchend', function(e) {
+        endY = e.changedTouches[0].clientY;
+        handleLocationSwipe();
+      });
+      
+      function handleLocationSwipe() {
+        const swipeThreshold = 50;
+        const diff = startY - endY;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            // Swipe up - next
+            nextLocationBtn.click();
+          } else {
+            // Swipe down - previous
+            prevLocationBtn.click();
+          }
+        }
+      }
+    });
+
     // Custom play/pause button logic for video grid
     document.querySelectorAll('.video-col').forEach(function(col) {
       const video = col.querySelector('video');

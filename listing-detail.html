@@ -1,115 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar and Banner Single Background</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Property Detail</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/property-style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <section class="property-gallery-section">
-    <div class="property-gallery-grid">
-      <div class="gallery-main-image">
-        <img src="images/img1.png" alt="Main Property Image">
-      </div>
-      <div class="gallery-side-images">
-        <img src="images/img2.jpg" alt="Side Image 1">
-        <img src="images/img3.jpg" alt="Side Image 2">
-      </div>
+<body class="">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo"><img src="images/logo.png" alt="logo"></div>
+      <form class="searchbar" action="#" method="get">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+        <input type="text" placeholder="Search Property here..." name="q">
+        <button type="submit">Search</button>
+      </form>
     </div>
-  </section>
-
-      <nav class="navbar">
-        <div class="navbar-left">
-          <div class="logo"><img src="images/logo.png" alt="logo"></div>
-          <form class="searchbar" action="#" method="get">
-            <span class="search-icon"><i class="fas fa-search"></i></span>
-            <input type="text" placeholder="Search Property here..." name="q">
-            <button type="submit">Search</button>
-          </form>
-        </div>
-        <div class="navbar-right">
-          <a href="#" class="nav-link">Expo - 2025</a>
-            <a href="#" class="nav-link">Buy</a>
-          <a href="#" class="nav-link">sell</a>
-          <a href="#" class="nav-link">Offplan</a>
-          <a href="#" class="nav-link">Sign up</a>
-          <a href="#" class="nav-link">Login</a>
-        </div>
-     
-      </nav>
-
-
-
-
-
-
-<section class="seo-links-section ">
-  <div class="container">
-    <div class="d-flex" style=" display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    justify-content: space-between;">
-<div>
-  <h3>SEO Links</h3>
-  <ul class="seo-links-grid">
-    <li><a href="#">Apartments for Sale in Dubai</a></li>
-    <li><a href="#">Villas for Sale in Dubai</a></li>
-    <li><a href="#">Townhouses for Sale in Dubai</a></li>
-    <li><a href="#">Luxury Properties for Sale</a></li>
-    <li><a href="#">Ready to Move Properties</a></li>
-    <li><a href="#">Apartments for Rent in Dubai</a></li>
-    <li><a href="#">Villas for Rent in Dubai</a></li>
-
-  </ul>
-</div>
-<div>
-  <h3>SEO Links</h3>
-  <ul class="seo-links-grid">
-    <li><a href="#">Apartments for Sale in Dubai</a></li>
-    <li><a href="#">Villas for Sale in Dubai</a></li>
-    <li><a href="#">Townhouses for Sale in Dubai</a></li>
-    <li><a href="#">Luxury Properties for Sale</a></li>
-    <li><a href="#">Ready to Move Properties</a></li>
-    <li><a href="#">Apartments for Rent in Dubai</a></li>
-    <li><a href="#">Villas for Rent in Dubai</a></li>
-   
-  </ul>
-</div>
-<div>
-  <h3>SEO Links</h3>
-  <ul class="seo-links-grid">
-    <li><a href="#">Apartments for Sale in Dubai</a></li>
-    <li><a href="#">Villas for Sale in Dubai</a></li>
-    <li><a href="#">Townhouses for Sale in Dubai</a></li>
-    <li><a href="#">Luxury Properties for Sale</a></li>
-    <li><a href="#">Ready to Move Properties</a></li>
-    <li><a href="#">Apartments for Rent in Dubai</a></li>
-    <li><a href="#">Villas for Rent in Dubai</a></li>
-  
-  </ul>
-</div>
-<div>
-  <h3>SEO Links</h3>
-  <ul class="seo-links-grid">
-    <li><a href="#">Apartments for Sale in Dubai</a></li>
-    <li><a href="#">Villas for Sale in Dubai</a></li>
-    <li><a href="#">Townhouses for Sale in Dubai</a></li>
-    <li><a href="#">Luxury Properties for Sale</a></li>
-    <li><a href="#">Ready to Move Properties</a></li>
-    <li><a href="#">Apartments for Rent in Dubai</a></li>
-    <li><a href="#">Villas for Rent in Dubai</a></li>
-
-  </ul>
-</div>
+    <div class="navbar-right">
+      <a href="#" class="nav-link">Expo - 2025</a>
+        <a href="#" class="nav-link">Buy</a>
+      <a href="#" class="nav-link">sell</a>
+      <a href="#" class="nav-link">Offplan</a>
+      <a href="#" class="nav-link">Sign up</a>
+      <a href="#" class="nav-link">Login</a>
     </div>
  
+  </nav>
+ 
+    <!-- <div id='dragelem'></div> -->
+    <div class="property-detail-main-layout">
+      <!-- Left: Property List -->
+      <aside class="property-list-sidebar">
+        <div class="property-list-card">
+          <div>
+          <span class="badge badge-new">NEW</span>
+          <img src="images/villa.webp" alt="Property 1" class="property-list-img">
+          </div>
+          <div class="property-list-info">
+            <div class="property-list-title">Navanaami Courtyard Of ...</div>
+            <div class="property-list-location">Kodathi, Near Sarjapur Road, Bangalore</div>
+            <div class="property-list-meta">
+              <span class="property-list-price">1.07 - 1.37 Cr</span>
+              <span class="property-list-type">3 BHK Apartment</span>
+            </div>
+            <div class="property-list-growth">12.1% price increase in last 3 months</div>
+            <div class="property-list-options">
+              <span class="property-list-option"><i class="fa fa-check-circle"></i> Get preferred options</span>
+              <span class="property-list-option">@zero brokerage</span>
+            </div>
+          </div>
+          <button class="property-list-fav"><i class="fa fa-heart"></i></button>
+        </div>
+        <div class="property-list-card">
+          <span class="badge badge-new">NEW</span>
+          <img src="images/apartment.webp" alt="Property 2" class="property-list-img">
+          <div class="property-list-info">
+            <div class="property-list-title">Navanaami Courtyard Of ...</div>
+            <div class="property-list-location">Kodathi, Near Sarjapur Road, Bangalore</div>
+            <div class="property-list-meta">
+              <span class="property-list-price">1.07 - 1.37 Cr</span>
+              <span class="property-list-type">3 BHK Apartment</span>
+            </div>
+            <div class="property-list-growth">12.1% price increase in last 3 months</div>
+            <div class="property-list-options">
+              <span class="property-list-option"><i class="fa fa-check-circle"></i> Get preferred options</span>
+              <span class="property-list-option">@zero brokerage</span>
+            </div>
+          </div>
+          <button class="property-list-fav"><i class="fa fa-heart"></i></button>
+        </div>
+        <div class="property-list-card">
+          <span class="badge badge-new">NEW</span>
+          <img src="images/townhouse.avif" alt="Property 3" class="property-list-img">
+          <div class="property-list-info">
+            <div class="property-list-title">Navanaami Courtyard Of ...</div>
+            <div class="property-list-location">Kodathi, Near Sarjapur Road, Bangalore</div>
+            <div class="property-list-meta">
+              <span class="property-list-price">1.07 - 1.37 Cr</span>
+              <span class="property-list-type">3 BHK Apartment</span>
+            </div>
+            <div class="property-list-growth">12.1% price increase in last 3 months</div>
+            <div class="property-list-options">
+              <span class="property-list-option"><i class="fa fa-check-circle"></i> Get preferred options</span>
+              <span class="property-list-option">@zero brokerage</span>
+            </div>
+          </div>
+          <button class="property-list-fav"><i class="fa fa-heart"></i></button>
+        </div>
+      </aside>
+    
+      <!-- Right: Property Detail -->
+      <main class="property-detail-content">
+        <!-- Gallery and Overlay -->
+        <div class="property-gallery-block">
+          <div class="property-gallery-main">
+            <div class="position-relative">
+            <img src="images/banner.jpg" alt="Main" class="property-gallery-main-img">
+            <div class="property-gallery-overlay">
+              <span class="property-id">ID 64448</span>
+              <button class="property-fav-btn"><i class="fa fa-heart"></i></button>
+              <button class="property-share-btn"><i class="fa fa-share-alt"></i></button>
+            </div>
+            <span class="badge badge-building">New building</span>
+            <div class="property-gallery-overlay-info">
+              <div class="property-gallery-title">Apartment &bull; Sale / Monthly rent / Daily rent</div>
+              <div class="property-gallery-location"><i class="fa fa-map-marker-alt"></i> Amiryan 10, Yerevan, Armenia</div>
+              <div class="property-gallery-stats">
+                <span><i class="fa fa-ruler-combined"></i> 120</span>
+                <span><i class="fa fa-bed"></i> 3</span>
+                <span><i class="fa fa-bath"></i> 2</span>
+                <span><i class="fa fa-car"></i> 1</span>
+              </div>
+            </div>
+            </div>
+            <div class="property-gallery-thumbs">
+              <img src="images/banner.jpg" alt="Thumb1" class="property-gallery-thumb">
+              <img src="images/apartment.webp" alt="Thumb2" class="property-gallery-thumb">
+              <img src="images/villa.webp" alt="Thumb3" class="property-gallery-thumb">
+              <img src="images/townhouse.avif" alt="Thumb4" class="property-gallery-thumb">
+            </div>
+           
+          </div>
+        </div>
+        <!-- Price Table -->
+        <div class="property-price-table">
+          <div class="property-price-row">
+            <span class="property-price-label">Selling price</span>
+            <span class="property-price-value price-green">$120,000</span>
+            <span class="property-price-eq">= $6150</span>
+          </div>
+          <div class="property-price-row">
+            <span class="property-price-label">Rent</span>
+            <span class="property-price-value">$500 <span class="property-price-period">/ Monthly rent</span></span>
+            <span class="property-price-eq">= $2500</span>
+          </div>
+          <div class="property-price-row">
+            <span class="property-price-label">Daily</span>
+            <span class="property-price-value">$37 <span class="property-price-period">/ Daily rent</span></span>
+            <span class="property-price-eq">= $19.20</span>
+          </div>
+          <div class="property-price-row property-price-offers">
+            <span class="property-price-offer">Price offers 3</span>
+          </div>
+        </div>
+        <!-- Description & Details -->
+        <div class="property-desc-block">
+          <div class="property-desc-title">Description</div>
+          <div class="property-desc-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
+          </div>
+          <div class="property-desc-table">
+            <div><strong>Number of floors of the building:</strong> 10</div>
+            <div><strong>Number of bathrooms:</strong> 2</div>
+            <div><strong>Building type:</strong> Stone</div>
+            <div><strong>Apartment floor:</strong> 7</div>
+            <div><strong>Condition of the property:</strong> New</div>
+          </div>
+        </div>
+        <!-- Facilities (Collapsible) -->
+        <div class="property-facilities-block">
+          <div class="property-facility-group">
+            <div class="property-facility-title">Communal facilities</div>
+            <div class="property-facility-list">Heating / Gas / Hot water / Electricity / Permanent water / Drinking water / Internet</div>
+          </div>
+          <div class="property-facility-group">
+            <div class="property-facility-title">Other • Rent</div>
+            <div class="property-facility-list">Hot water / Kitchen / Garage / Sunny / Elevator</div>
+          </div>
+          <div class="property-facility-group">
+            <div class="property-facility-title">Other • Sale</div>
+            <div class="property-facility-list">Hot water / Kitchen / Garage / Sunny / Elevator</div>
+          </div>
+        </div>
+        <!-- Contact/Owner -->
+        <div class="property-contact-block">
+          <div class="property-contact-owner">
+            <img src="images/director.png" alt="Owner" class="property-contact-avatar">
+            <span class="property-contact-name">Vardan Asatryan</span>
+            <span class="property-contact-type">Individual</span>
+          </div>
+          <div class="property-contact-actions">
+            <button class="property-contact-btn property-contact-message">Write a message</button>
+            <button class="property-contact-btn property-contact-call">Call</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  <section class="seo-links-section ">
+    <div class="container">
+      <div class="d-flex" style=" display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      justify-content: space-between;">
+  <div>
+    <h3>SEO Links</h3>
+    <ul class="seo-links-grid">
+      <li><a href="#">Apartments for Sale in Dubai</a></li>
+      <li><a href="#">Villas for Sale in Dubai</a></li>
+      <li><a href="#">Townhouses for Sale in Dubai</a></li>
+      <li><a href="#">Luxury Properties for Sale</a></li>
+      <li><a href="#">Ready to Move Properties</a></li>
+      <li><a href="#">Apartments for Rent in Dubai</a></li>
+      <li><a href="#">Villas for Rent in Dubai</a></li>
+  
+    </ul>
   </div>
-</section>
-
-  <!-- <div id='dragelem'></div> -->
+  <div>
+    <h3>SEO Links</h3>
+    <ul class="seo-links-grid">
+      <li><a href="#">Apartments for Sale in Dubai</a></li>
+      <li><a href="#">Villas for Sale in Dubai</a></li>
+      <li><a href="#">Townhouses for Sale in Dubai</a></li>
+      <li><a href="#">Luxury Properties for Sale</a></li>
+      <li><a href="#">Ready to Move Properties</a></li>
+      <li><a href="#">Apartments for Rent in Dubai</a></li>
+      <li><a href="#">Villas for Rent in Dubai</a></li>
+     
+    </ul>
+  </div>
+  <div>
+    <h3>SEO Links</h3>
+    <ul class="seo-links-grid">
+      <li><a href="#">Apartments for Sale in Dubai</a></li>
+      <li><a href="#">Villas for Sale in Dubai</a></li>
+      <li><a href="#">Townhouses for Sale in Dubai</a></li>
+      <li><a href="#">Luxury Properties for Sale</a></li>
+      <li><a href="#">Ready to Move Properties</a></li>
+      <li><a href="#">Apartments for Rent in Dubai</a></li>
+      <li><a href="#">Villas for Rent in Dubai</a></li>
+    
+    </ul>
+  </div>
+  <div>
+    <h3>SEO Links</h3>
+    <ul class="seo-links-grid">
+      <li><a href="#">Apartments for Sale in Dubai</a></li>
+      <li><a href="#">Villas for Sale in Dubai</a></li>
+      <li><a href="#">Townhouses for Sale in Dubai</a></li>
+      <li><a href="#">Luxury Properties for Sale</a></li>
+      <li><a href="#">Ready to Move Properties</a></li>
+      <li><a href="#">Apartments for Rent in Dubai</a></li>
+      <li><a href="#">Villas for Rent in Dubai</a></li>
+  
+    </ul>
+  </div>
+      </div>
+   
+    </div>
+  </section>
+   <!-- <div id='dragelem'></div> -->
 <footer class="site-footer ">
   <div class="footer-top">
     <div class="footer-col about">
@@ -238,9 +378,13 @@
     &copy; 2024 Dubai Realty. All rights reserved.
   </div>
 </footer>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/script.js"></script>
+  <script>
+    function showImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
 
 </body>
 </html>
+
+
